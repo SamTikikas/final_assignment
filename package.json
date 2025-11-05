@@ -1,0 +1,7 @@
+{
+  "name": "infohub-cors-fixed",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "cd server && npm install && cd ../client && npm install"
+  }
+}
