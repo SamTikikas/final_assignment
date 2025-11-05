@@ -1,48 +1,72 @@
-# Screen Recorder App - MERN Stack  
+# 🌍 InfoHub Premium - WeatherAPI.com Edition
 
-A full-stack screen recording application built with React, Node.js, Express, and MySQL that allows users to record their browser screen with audio, preview recordings, and manage uploaded files.  
+**Competition-Winning Project** with premium weather data!
 
----
+## ⭐ What's New
 
-## 🚀 Features  
-- **Native Screen Recording**: Uses `navigator.mediaDevices.getDisplayMedia()` API  
-- **Audio Capture**: Records both screen audio and microphone  
-- **Live Timer**: Real-time recording timer with 3-minute limit  
-- **Live Preview**: Shows recording in real-time  
-- **Download & Upload**: Save recordings locally or upload to server  
-- **Recordings Manager**: View and play all uploaded recordings  
-- **Responsive Design**: Bootstrap-powered responsive UI  
-- **RESTful API**: Complete backend with MySQL database  
+✅ **WeatherAPI.com** - Premium weather service  
+✅ **3-Day Forecast** - See upcoming weather  
+✅ **Detailed Metrics** - Temperature, humidity, pressure, UV index, dew point, visibility  
+✅ **Real Weather Icons** - From WeatherAPI  
+✅ **24 World Cities** - Select any city  
+✅ **Advanced Data** - More fields than basic API
 
----
+## 🚀 Setup
 
-## 🛠️ Tech Stack  
-
-### Frontend  
-- **React** 18.2.0  
-- **Bootstrap** 5.3.0 & React-Bootstrap  
-- **Axios** for API calls  
-- **Native MediaRecorder API**  
-
-### Backend  
-- **Node.js** with Express.js  
-- **MySQL** database with mysql2  
-- **Multer** for file uploads  
-- **CORS** for cross-origin requests  
-
----
-
-## 📋 Prerequisites  
-- Node.js 14+  
-- MySQL 8.0+  
-- Chrome/Edge browser (for screen recording)  
-- Git  
-
----
-
-## 🔧 Installation & Setup  
-
-### 1. Clone the Repository  
 ```bash
-git clone https://github.com/yourusername/mern-screen-recorder.git
-cd mern-screen-recorder
+cd server && npm install
+cd ../client && npm install
+
+# Terminal 1: Backend
+cd server && npm run dev
+
+# Terminal 2: Frontend
+cd client && npm run dev
+
+# Open: http://localhost:3000
+```
+
+## 🎯 Features
+
+### Weather Module
+- Current weather with detailed info
+- Real weather icons from WeatherAPI
+- Temperature in C & F
+- Humidity, pressure, UV index
+- Dew point, visibility, wind direction
+
+### Forecast Module  
+- 3-day weather forecast
+- Max/min temperatures
+- Chance of rain & wind
+- Weather condition icons
+
+### Currency Converter
+- 6 currencies supported
+- Real-time conversion
+- Manual calculation fallback
+
+### Quote Generator
+- Daily inspiration
+- Copy to clipboard
+- History tracking
+
+## 📊 API Endpoints
+
+- `/api/health` - Health check
+- `/api/cities` - List all cities
+- `/api/weather?city=London` - Current weather
+- `/api/forecast?city=London&days=3` - 3-day forecast
+- `/api/currency?amount=100&to=USD,EUR` - Currency
+- `/api/quote` - Random quote
+
+## 🎓 My Advantage from remaining crowd:
+
+1. **Real API** - WeatherAPI.com (premium service)
+2. **More Features** - Weather + Forecast + Currency + Quotes
+3. **Better Data** - 15+ weather metrics vs 5-6 in basic APIs
+4. **Professional** - Real icons, multiple cities, forecast
+5. **Complete** - Error handling, caching, fallbacks
+6. **Beautiful UI** - Modern responsive design
+
+**Ready for competition!** 🏆
