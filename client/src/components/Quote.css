@@ -1,0 +1,162 @@
+
+.quote-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cute-quote-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  gap: 1rem;
+}
+
+.thinking {
+  font-size: 4rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.cute-quote-loader p {
+  color: var(--light-text-secondary);
+  font-weight: 600;
+  font-size: 1.1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+body.dark-mode .cute-quote-loader p {
+  color: var(--dark-text-secondary);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.quote-box {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  text-align: center;
+  animation: fadeInScale 0.6s ease;
+}
+
+body.dark-mode .quote-box {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.quote-text {
+  font-size: 1.4rem;
+  color: var(--light-text);
+  font-style: italic;
+  line-height: 1.8;
+  margin: 1rem 0;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+body.dark-mode .quote-text {
+  color: var(--dark-text);
+}
+
+.quote-author {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.quote-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 1rem 1.8rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+  background: var(--light-bg);
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+body.dark-mode .btn-secondary {
+  background: var(--dark-bg);
+  border-color: var(--primary-light);
+  color: var(--primary-light);
+}
+
+.btn-secondary:hover {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .quote-box {
+    padding: 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

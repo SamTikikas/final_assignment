@@ -1,0 +1,113 @@
+
+.currency-input-section {
+  margin-bottom: 2rem;
+}
+
+.currency-input-section label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--light-text);
+}
+
+body.dark-mode .currency-input-section label {
+  color: var(--dark-text);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.amount-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3rem;
+  border: 2px solid var(--light-border);
+  border-radius: 12px;
+  font-size: 1.1rem;
+  background: var(--light-card);
+  color: var(--light-text);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .amount-input {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
+
+.amount-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.currency-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.2rem;
+}
+
+.currency-item {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+  animation: scaleIn 0.5s ease forwards;
+  transform-origin: center;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.currency-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.3);
+}
+
+.code {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.amount {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+@media (max-width: 768px) {
+  .currency-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .amount-input {
+    font-size: 1rem;
+  }
+}
